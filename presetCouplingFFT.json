@@ -1,0 +1,446 @@
+{
+	"simulator": {
+		"deltaT": 1,
+		"tZero": 0,
+		"nElements": 23,
+		"elementLabels": [
+			"stimulus v1",
+			"stimulus v2",
+			"stimulus s1",
+			"stimulus s2",
+			"stimulus sum s",
+			"stimulus f1",
+			"stimulus f2",
+			"stimulus sum f",
+			"field v",
+			"field s",
+			"field f",
+			"v -> v",
+			"sum v",
+			"s -> s",
+			"f -> f",
+			"v -> s",
+			"v -> f",
+			"s -> v",
+			"f -> v",
+			"transpose f -> v",
+			"noise s",
+			"noise f",
+			"noise v"
+		],
+		"elements": [
+			{
+				"label": "stimulus v1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 5,
+					"sigmaY": 5,
+					"amplitude": 6,
+					"positionX": 25,
+					"positionY": 25,
+					"circularX": 1,
+					"circularY": 0,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus v2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 5,
+					"sigmaY": 5,
+					"amplitude": 6,
+					"positionX": 75,
+					"positionY": 75,
+					"circularX": 1,
+					"circularY": 0,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus s1",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"position": 25,
+					"circular": 0,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus s2",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 1,
+					"position": 75,
+					"circular": 0,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus sum s",
+				"class": "SumInputs",
+				"param": {
+					"size": [1,100]
+				},
+				"nInputs": 2,
+				"input": [
+					{
+						"label": "stimulus s1",
+						"component": "output"
+					},
+					{
+						"label": "stimulus s2",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "stimulus f1",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"position": 25,
+					"circular": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus f2",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"position": 75,
+					"circular": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "stimulus sum f",
+				"class": "SumInputs",
+				"param": {
+					"size": [1,100]
+				},
+				"nInputs": 2,
+				"input": [
+					{
+						"label": "stimulus f1",
+						"component": "output"
+					},
+					{
+						"label": "stimulus f2",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "field v",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 20,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "stimulus v1",
+						"component": "output"
+					},
+					{
+						"label": "stimulus v2",
+						"component": "output"
+					},
+					{
+						"label": "v -> v",
+						"component": "output"
+					},
+					{
+						"label": "s -> v",
+						"component": "output"
+					},
+					{
+						"label": "transpose f -> v",
+						"component": "output"
+					},
+					{
+						"label": "noise v",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "field s",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 20,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 4,
+				"input": [
+					{
+						"label": "stimulus sum s",
+						"component": "output"
+					},
+					{
+						"label": "s -> s",
+						"component": "output"
+					},
+					{
+						"label": "v -> s",
+						"component": "output"
+					},
+					{
+						"label": "noise s",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "field f",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 20,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 4,
+				"input": [
+					{
+						"label": "stimulus sum f",
+						"component": "output"
+					},
+					{
+						"label": "f -> f",
+						"component": "output"
+					},
+					{
+						"label": "v -> f",
+						"component": "output"
+					},
+					{
+						"label": "noise f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "v -> v",
+				"class": "KernelFFT",
+				"param": {
+					"size": [100,100],
+					"sigmaExc": [
+						[5],
+						[5]
+					],
+					"amplitudeExc": 10,
+					"sigmaInh": [
+						[10],
+						[10]
+					],
+					"amplitudeInh": 12.5,
+					"amplitudeGlobal": 0,
+					"circular": [
+						[1],
+						[1]
+					],
+					"normalized": 1,
+					"paddingFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field v",
+					"component": "output"
+				}
+			},
+			{
+				"label": "sum v",
+				"class": "SumAllDimensions",
+				"param": {
+					"size": [100,100]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field v",
+					"component": "output"
+				}
+			},
+			{
+				"label": "s -> s",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 5,
+					"amplitudeExc": 5,
+					"sigmaInh": 10,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "f -> f",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 5,
+					"amplitudeExc": 5,
+					"sigmaInh": 10,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field f",
+					"component": "output"
+				}
+			},
+			{
+				"label": "v -> s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum v",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "v -> f",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum v",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "s -> v",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "f -> v",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "field f",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose f -> v",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "f -> v",
+					"component": "output"
+				}
+			},
+			{
+				"label": "noise s",
+				"class": "NormalNoise",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "noise f",
+				"class": "NormalNoise",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "noise v",
+				"class": "NormalNoise",
+				"param": {
+					"size": [100,100],
+					"amplitude": 1
+				},
+				"nInputs": 0,
+				"input": null
+			}
+		]
+	}
+}

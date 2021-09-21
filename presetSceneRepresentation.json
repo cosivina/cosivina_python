@@ -1,0 +1,3375 @@
+{
+	"simulator": {
+		"deltaT": 1,
+		"tZero": 0,
+		"nElements": 168,
+		"elementLabels": [
+			"atn_sr",
+			"ior_s",
+			"cos",
+			"atn_sa",
+			"con_s",
+			"wm_s",
+			"vis_f1",
+			"atn_f1",
+			"con_f1",
+			"wm_f1",
+			"atn_c1",
+			"wm_c1",
+			"pd_c1",
+			"vis_f2",
+			"atn_f2",
+			"con_f2",
+			"wm_f2",
+			"atn_c2",
+			"wm_c2",
+			"pd_c2",
+			"atn_sr -> atn_sr",
+			"ior_s -> ior_s",
+			"cos -> cos",
+			"atn_sa -> atn_sa",
+			"con_s -> con_s",
+			"wm_s -> wm_s",
+			"vis_f1 -> vis_f1",
+			"sum vis_f1",
+			"atn_c1 -> atn_c1",
+			"wm_c1 -> wm_c1",
+			"sum wm_c1",
+			"wm_c1 -> wm_c1 (global\/feature)",
+			"atn_f1 -> atn_f1",
+			"con_f1 -> con_f1",
+			"wm_f1 -> wm_f1",
+			"pd_c1 -> pd_c1",
+			"vis_f2 -> vis_f2",
+			"sum vis_f2",
+			"atn_c2 -> atn_c2",
+			"wm_c2 -> wm_c2",
+			"sum wm_c2",
+			"wm_c2 -> wm_c2 (global\/feature)",
+			"atn_f2 -> atn_f2",
+			"con_f2 -> con_f2",
+			"wm_f2 -> wm_f2",
+			"pd_c2 -> pd_c2",
+			"atn_sr -> atn_sa",
+			"scale atn_sr -> atn_sa",
+			"atn_sr -> vis_f",
+			"atn_sr -> ior_s",
+			"ior_s -> atn_sr",
+			"ior_s -> atn_sa",
+			"scale ior_s -> atn_sa",
+			"cos -> ior_s",
+			"cos -> atn_c",
+			"cos -> atn_sr",
+			"cos -> atn_sa",
+			"cos -> atn_f",
+			"atn_sa -> atn_sr",
+			"scale atn_sa -> atn_sr",
+			"atn_sa -> con_s",
+			"atn_sa -> wm_s",
+			"atn_sa -> wm_c",
+			"atn_sa -> atn_c",
+			"con_s -> atn_sa",
+			"con_s -> wm_s",
+			"con_s -> atn_c",
+			"wm_s -> con_s",
+			"wm_s -> atn_sa",
+			"wm_s -> wm_c",
+			"vis_f1 -> atn_sr",
+			"vis_f1 -> ior_s",
+			"vis_f1 -> con_s",
+			"vis_f1 -> wm_s",
+			"vis_f1 -> atn_f1",
+			"vis_f1 -> con_f1",
+			"vis_f1 -> wm_f1",
+			"atn_f1 -> vis_f1",
+			"transpose atn_f1 -> vis_f1",
+			"atn_f1 -> con_f1",
+			"atn_f1 -> wm_f1",
+			"atn_f1 -> atn_c1",
+			"transpose atn_f1 -> atn_c1",
+			"atn_f1 -> wm_c1",
+			"transpose atn_f1 -> wm_c1",
+			"con_f1 -> atn_f1",
+			"con_f1 -> wm_f1",
+			"con_f1 -> atn_c1",
+			"transpose con_f1 -> atn_c1",
+			"wm_f1 -> con_f1",
+			"wm_f1 -> atn_f1",
+			"wm_f1 -> wm_c1",
+			"transpose wm_f1 -> wm_c1",
+			"atn_c1 -> atn_sa",
+			"atn_c1 -> con_s",
+			"atn_c1 -> wm_s",
+			"atn_c1 -> con_f1",
+			"atn_c1 -> wm_f1",
+			"atn_c1 -> wm_c1",
+			"atn_c1 -> pd_c1",
+			"pd_c1 -> cos",
+			"wm_c1 -> wm_s",
+			"wm_c1 -> wm_f1",
+			"wm_c1 -> atn_c1",
+			"vis_f2 -> atn_sr",
+			"vis_f2 -> ior_s",
+			"vis_f2 -> con_s",
+			"vis_f2 -> wm_s",
+			"vis_f2 -> atn_f2",
+			"vis_f2 -> con_f2",
+			"vis_f2 -> wm_f2",
+			"atn_f2 -> vis_f2",
+			"transpose atn_f2 -> vis_f2",
+			"atn_f2 -> con_f2",
+			"atn_f2 -> wm_f2",
+			"atn_f2 -> atn_c2",
+			"transpose atn_f2 -> atn_c2",
+			"atn_f2 -> wm_c2",
+			"transpose atn_f2 -> wm_c2",
+			"con_f2 -> atn_f2",
+			"con_f2 -> wm_f2",
+			"con_f2 -> atn_c2",
+			"transpose con_f2 -> atn_c2",
+			"wm_f2 -> con_f2",
+			"wm_f2 -> atn_f2",
+			"wm_f2 -> wm_c2",
+			"transpose wm_f2 -> wm_c2",
+			"atn_c2 -> atn_sa",
+			"atn_c2 -> con_s",
+			"atn_c2 -> wm_s",
+			"atn_c2 -> con_f2",
+			"atn_c2 -> wm_f2",
+			"atn_c2 -> wm_c2",
+			"atn_c2 -> pd_c2",
+			"pd_c2 -> cos",
+			"wm_c2 -> wm_s",
+			"wm_c2 -> wm_f2",
+			"wm_c2 -> atn_c2",
+			"i1 for vis_f1",
+			"i2 for vis_f1",
+			"i3 for vis_f1",
+			"i4 for vis_f1",
+			"i5 for vis_f1",
+			"i6 for vis_f1",
+			"i1 for vis_f2",
+			"i2 for vis_f2",
+			"i3 for vis_f2",
+			"i4 for vis_f2",
+			"i5 for vis_f2",
+			"i6 for vis_f2",
+			"i1 for atn_sr",
+			"i2 for atn_sr",
+			"i3 for atn_sr",
+			"boost ior_s",
+			"boost atn_sr",
+			"boost atn_sa",
+			"boost con_s",
+			"boost wm_s",
+			"boost vis_f",
+			"boost atn_f",
+			"boost con_f",
+			"boost wm_f",
+			"boost atn_c",
+			"boost wm_c",
+			"noise atn_sr",
+			"noise kernel atn_sr",
+			"noise atn_sa",
+			"noise kernel atn_sa"
+		],
+		"elements": [
+			{
+				"label": "atn_sr",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 2
+				},
+				"nInputs": 11,
+				"input": [
+					{
+						"label": "atn_sr -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "ior_s -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "scale atn_sa -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "i1 for atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "i2 for atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "i3 for atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_sr",
+						"component": "output"
+					},
+					{
+						"label": "noise kernel atn_sr",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "ior_s",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "ior_s -> ior_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_sr -> ior_s",
+						"component": "output"
+					},
+					{
+						"label": "cos -> ior_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> ior_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> ior_s",
+						"component": "output"
+					},
+					{
+						"label": "boost ior_s",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "cos",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,1],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 3,
+				"input": [
+					{
+						"label": "cos -> cos",
+						"component": "output"
+					},
+					{
+						"label": "pd_c1 -> cos",
+						"component": "output"
+					},
+					{
+						"label": "pd_c2 -> cos",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_sa",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 10,
+				"input": [
+					{
+						"label": "atn_sa -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "scale atn_sr -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "scale ior_s -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "con_s -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "wm_s -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_sa",
+						"component": "output"
+					},
+					{
+						"label": "noise kernel atn_sa",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "con_s",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 8,
+				"input": [
+					{
+						"label": "con_s -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "wm_s -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> con_s",
+						"component": "output"
+					},
+					{
+						"label": "boost con_s",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "wm_s",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 10,
+				"input": [
+					{
+						"label": "wm_s -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "con_s -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "wm_c1 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "wm_c2 -> wm_s",
+						"component": "output"
+					},
+					{
+						"label": "boost wm_s",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "vis_f1",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 2
+				},
+				"nInputs": 10,
+				"input": [
+					{
+						"label": "vis_f1 -> vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "atn_sr -> vis_f",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f1 -> vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i1 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i2 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i3 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i4 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i5 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "i6 for vis_f1",
+						"component": "output"
+					},
+					{
+						"label": "boost vis_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_f1",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 2
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "atn_f1 -> atn_f1",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_f",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> atn_f1",
+						"component": "output"
+					},
+					{
+						"label": "con_f1 -> atn_f1",
+						"component": "output"
+					},
+					{
+						"label": "wm_f1 -> atn_f1",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "con_f1",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "con_f1 -> con_f1",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> con_f1",
+						"component": "output"
+					},
+					{
+						"label": "atn_f1 -> con_f1",
+						"component": "output"
+					},
+					{
+						"label": "wm_f1 -> con_f1",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> con_f1",
+						"component": "output"
+					},
+					{
+						"label": "boost con_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "wm_f1",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 7,
+				"input": [
+					{
+						"label": "wm_f1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "vis_f1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "atn_f1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "con_f1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "wm_c1 -> wm_f1",
+						"component": "output"
+					},
+					{
+						"label": "boost wm_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_c1",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 8,
+				"input": [
+					{
+						"label": "atn_c1 -> atn_c1",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "con_s -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f1 -> atn_c1",
+						"component": "output"
+					},
+					{
+						"label": "transpose con_f1 -> atn_c1",
+						"component": "output"
+					},
+					{
+						"label": "wm_c1 -> atn_c1",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_c",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "wm_c1",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 8,
+				"input": [
+					{
+						"label": "wm_c1 -> wm_c1",
+						"component": "output"
+					},
+					{
+						"label": "wm_c1 -> wm_c1 (global\/feature)",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> wm_c",
+						"component": "output"
+					},
+					{
+						"label": "wm_s -> wm_c",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f1 -> wm_c1",
+						"component": "output"
+					},
+					{
+						"label": "transpose wm_f1 -> wm_c1",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> wm_c1",
+						"component": "output"
+					},
+					{
+						"label": "boost wm_c",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "pd_c1",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,1],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 2,
+				"input": [
+					{
+						"label": "pd_c1 -> pd_c1",
+						"component": "output"
+					},
+					{
+						"label": "atn_c1 -> pd_c1",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "vis_f2",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 2
+				},
+				"nInputs": 10,
+				"input": [
+					{
+						"label": "vis_f2 -> vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "atn_sr -> vis_f",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f2 -> vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i1 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i2 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i3 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i4 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i5 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "i6 for vis_f2",
+						"component": "output"
+					},
+					{
+						"label": "boost vis_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_f2",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 2
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "atn_f2 -> atn_f2",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_f",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> atn_f2",
+						"component": "output"
+					},
+					{
+						"label": "con_f2 -> atn_f2",
+						"component": "output"
+					},
+					{
+						"label": "wm_f2 -> atn_f2",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "con_f2",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 6,
+				"input": [
+					{
+						"label": "con_f2 -> con_f2",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> con_f2",
+						"component": "output"
+					},
+					{
+						"label": "atn_f2 -> con_f2",
+						"component": "output"
+					},
+					{
+						"label": "wm_f2 -> con_f2",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> con_f2",
+						"component": "output"
+					},
+					{
+						"label": "boost con_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "wm_f2",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 7,
+				"input": [
+					{
+						"label": "wm_f2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "vis_f2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "atn_f2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "con_f2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "wm_c2 -> wm_f2",
+						"component": "output"
+					},
+					{
+						"label": "boost wm_f",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_c2",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 8,
+				"input": [
+					{
+						"label": "atn_c2 -> atn_c2",
+						"component": "output"
+					},
+					{
+						"label": "cos -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "con_s -> atn_c",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f2 -> atn_c2",
+						"component": "output"
+					},
+					{
+						"label": "transpose con_f2 -> atn_c2",
+						"component": "output"
+					},
+					{
+						"label": "wm_c2 -> atn_c2",
+						"component": "output"
+					},
+					{
+						"label": "boost atn_c",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "wm_c2",
+				"class": "NeuralField",
+				"param": {
+					"size": [100,100],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 8,
+				"input": [
+					{
+						"label": "wm_c2 -> wm_c2",
+						"component": "output"
+					},
+					{
+						"label": "wm_c2 -> wm_c2 (global\/feature)",
+						"component": "output"
+					},
+					{
+						"label": "atn_sa -> wm_c",
+						"component": "output"
+					},
+					{
+						"label": "wm_s -> wm_c",
+						"component": "output"
+					},
+					{
+						"label": "transpose atn_f2 -> wm_c2",
+						"component": "output"
+					},
+					{
+						"label": "transpose wm_f2 -> wm_c2",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> wm_c2",
+						"component": "output"
+					},
+					{
+						"label": "boost wm_c",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "pd_c2",
+				"class": "NeuralField",
+				"param": {
+					"size": [1,1],
+					"tau": 10,
+					"h": -5,
+					"beta": 4
+				},
+				"nInputs": 2,
+				"input": [
+					{
+						"label": "pd_c2 -> pd_c2",
+						"component": "output"
+					},
+					{
+						"label": "atn_c2 -> pd_c2",
+						"component": "output"
+					}
+				]
+			},
+			{
+				"label": "atn_sr -> atn_sr",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 8,
+					"sigmaInh": 8,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.6,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "ior_s -> ior_s",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 20,
+					"sigmaInh": 8,
+					"amplitudeInh": 15,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "ior_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> cos",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 4
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> atn_sa",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 6,
+					"sigmaInh": 8,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_s -> con_s",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 20,
+					"sigmaInh": 8,
+					"amplitudeInh": 20,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_s -> wm_s",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 27,
+					"sigmaInh": 8,
+					"amplitudeInh": 25,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "vis_f1 -> vis_f1",
+				"class": "KernelFFT",
+				"param": {
+					"size": [100,100],
+					"sigmaExc": [
+						[4],
+						[4]
+					],
+					"amplitudeExc": 7.5,
+					"sigmaInh": [
+						[8],
+						[8]
+					],
+					"amplitudeInh": 7.5,
+					"amplitudeGlobal": -0.002,
+					"circular": [
+						[1],
+						[1]
+					],
+					"normalized": 1,
+					"paddingFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "vis_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "sum vis_f1",
+				"class": "SumAllDimensions",
+				"param": {
+					"size": [100,100]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "vis_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c1 -> atn_c1",
+				"class": "LateralInteractions2D",
+				"param": {
+					"size": [100,100],
+					"sigmaExcY": 4,
+					"sigmaExcX": 4,
+					"amplitudeExc": 2.5,
+					"sigmaInhY": 0,
+					"sigmaInhX": 0,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.0175,
+					"circularY": 1,
+					"circularX": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c1 -> wm_c1",
+				"class": "KernelFFT",
+				"param": {
+					"size": [100,100],
+					"sigmaExc": [
+						[4],
+						[4]
+					],
+					"amplitudeExc": 25,
+					"sigmaInh": [
+						[8],
+						[8]
+					],
+					"amplitudeInh": 27.5,
+					"amplitudeGlobal": 0,
+					"circular": [
+						[1],
+						[1]
+					],
+					"normalized": 1,
+					"paddingFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "sum wm_c1",
+				"class": "SumAllDimensions",
+				"param": {
+					"size": [100,100]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c1 -> wm_c1 (global\/feature)",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,100],
+					"amplitude": -0.05
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_f1 -> atn_f1",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 4,
+					"sigmaInh": 8,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f1 -> con_f1",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 20,
+					"sigmaInh": 8,
+					"amplitudeInh": 20,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f1 -> wm_f1",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 27,
+					"sigmaInh": 8,
+					"amplitudeInh": 25,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "pd_c1 -> pd_c1",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 4
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "pd_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "vis_f2 -> vis_f2",
+				"class": "KernelFFT",
+				"param": {
+					"size": [100,100],
+					"sigmaExc": [
+						[4],
+						[4]
+					],
+					"amplitudeExc": 7.5,
+					"sigmaInh": [
+						[8],
+						[8]
+					],
+					"amplitudeInh": 7.5,
+					"amplitudeGlobal": -0.002,
+					"circular": [
+						[1],
+						[1]
+					],
+					"normalized": 1,
+					"paddingFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "vis_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "sum vis_f2",
+				"class": "SumAllDimensions",
+				"param": {
+					"size": [100,100]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "vis_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c2 -> atn_c2",
+				"class": "LateralInteractions2D",
+				"param": {
+					"size": [100,100],
+					"sigmaExcY": 4,
+					"sigmaExcX": 4,
+					"amplitudeExc": 2.5,
+					"sigmaInhY": 0,
+					"sigmaInhX": 0,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.0175,
+					"circularY": 1,
+					"circularX": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c2 -> wm_c2",
+				"class": "KernelFFT",
+				"param": {
+					"size": [100,100],
+					"sigmaExc": [
+						[4],
+						[4]
+					],
+					"amplitudeExc": 25,
+					"sigmaInh": [
+						[8],
+						[8]
+					],
+					"amplitudeInh": 27.5,
+					"amplitudeGlobal": 0,
+					"circular": [
+						[1],
+						[1]
+					],
+					"normalized": 1,
+					"paddingFactor": 5
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "sum wm_c2",
+				"class": "SumAllDimensions",
+				"param": {
+					"size": [100,100]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c2 -> wm_c2 (global\/feature)",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,100],
+					"amplitude": -0.05
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_f2 -> atn_f2",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 4,
+					"sigmaInh": 8,
+					"amplitudeInh": 0,
+					"amplitudeGlobal": -0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f2 -> con_f2",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 20,
+					"sigmaInh": 8,
+					"amplitudeInh": 20,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f2 -> wm_f2",
+				"class": "LateralInteractions1D",
+				"param": {
+					"size": [1,100],
+					"sigmaExc": 4,
+					"amplitudeExc": 27,
+					"sigmaInh": 8,
+					"amplitudeInh": 25,
+					"amplitudeGlobal": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "pd_c2 -> pd_c2",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 4
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "pd_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sr -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 10,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "scale atn_sr -> atn_sa",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sr -> atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sr -> vis_f",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sr -> ior_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "ior_s -> atn_sr",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -10,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "ior_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "ior_s -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -10,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "ior_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "scale ior_s -> atn_sa",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "ior_s -> atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> ior_s",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 2.25
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> atn_c",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": -2
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> atn_sr",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 0
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> atn_sa",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 0
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "cos -> atn_f",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": -4
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "cos",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> atn_sr",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 3,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "scale atn_sa -> atn_sr",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa -> atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 2.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 3.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> wm_c",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_sa -> atn_c",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 2.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_sa",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_s -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_s -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_s -> atn_c",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_s -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 5,
+					"amplitude": -8,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_s -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_s -> wm_c",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_s",
+					"component": "output"
+				}
+			},
+			{
+				"label": "vis_f1 -> atn_sr",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.8,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> ior_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.15,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.625,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> atn_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> con_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.25,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "vis_f1 -> wm_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.4,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_f1 -> vis_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.25,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f1 -> vis_f1",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1 -> vis_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f1 -> con_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 7.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f1 -> wm_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 3.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f1 -> atn_c1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f1 -> atn_c1",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1 -> atn_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f1 -> wm_c1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f1 -> wm_c1",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f1 -> wm_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f1 -> atn_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f1 -> wm_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f1 -> atn_c1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose con_f1 -> atn_c1",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f1 -> atn_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f1 -> con_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -8,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f1 -> atn_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f1 -> wm_c1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose wm_f1 -> wm_c1",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f1 -> wm_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c1 -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c1 -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -0.375,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c1 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c1 -> con_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -0.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_c1 -> wm_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_c1 -> wm_c1",
+				"class": "GaussKernel2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c1 -> pd_c1",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 0.05
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c1 -> atn_c1",
+					"component": "fullSum"
+				}
+			},
+			{
+				"label": "pd_c1 -> cos",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "pd_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c1 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.05,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c1",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "wm_c1 -> wm_f1",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c1",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "wm_c1 -> atn_c1",
+				"class": "GaussKernel2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 6,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c1",
+					"component": "output"
+				}
+			},
+			{
+				"label": "vis_f2 -> atn_sr",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.8,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> ior_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.15,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.625,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> atn_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> con_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.25,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "vis_f2 -> wm_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.4,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum vis_f2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_f2 -> vis_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.25,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f2 -> vis_f2",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2 -> vis_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f2 -> con_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 7.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f2 -> wm_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 3.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f2 -> atn_c2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 2,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f2 -> atn_c2",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2 -> atn_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_f2 -> wm_c2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose atn_f2 -> wm_c2",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_f2 -> wm_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f2 -> atn_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f2 -> wm_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "con_f2 -> atn_c2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose con_f2 -> atn_c2",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "con_f2 -> atn_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f2 -> con_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -8,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f2 -> atn_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_f2 -> wm_c2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 1.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "transpose wm_f2 -> wm_c2",
+				"class": "Transpose",
+				"param": {
+					"size": [100,1]
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_f2 -> wm_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c2 -> atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c2 -> con_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -0.375,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c2 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "atn_c2 -> con_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": -0.75,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_c2 -> wm_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "atn_c2 -> wm_c2",
+				"class": "GaussKernel2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "atn_c2 -> pd_c2",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 0.05
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "atn_c2 -> atn_c2",
+					"component": "fullSum"
+				}
+			},
+			{
+				"label": "pd_c2 -> cos",
+				"class": "ScaleInput",
+				"param": {
+					"size": [1,1],
+					"amplitude": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "pd_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "wm_c2 -> wm_s",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.05,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c2",
+					"component": "verticalSum"
+				}
+			},
+			{
+				"label": "wm_c2 -> wm_f2",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0.1,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "sum wm_c2",
+					"component": "horizontalSum"
+				}
+			},
+			{
+				"label": "wm_c2 -> atn_c2",
+				"class": "GaussKernel2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 6,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "wm_c2",
+					"component": "output"
+				}
+			},
+			{
+				"label": "i1 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 20,
+					"positionY": 17,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i2 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 50,
+					"positionY": 50,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i3 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 80,
+					"positionY": 83,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i4 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 20,
+					"positionY": 83,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i5 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 50,
+					"positionY": 50,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i6 for vis_f1",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 80,
+					"positionY": 17,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i1 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 20,
+					"positionY": 75,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i2 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 50,
+					"positionY": 50,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i3 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 80,
+					"positionY": 25,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i4 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 20,
+					"positionY": 25,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i5 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 50,
+					"positionY": 50,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i6 for vis_f2",
+				"class": "GaussStimulus2D",
+				"param": {
+					"size": [100,100],
+					"sigmaX": 4,
+					"sigmaY": 4,
+					"amplitude": 0,
+					"positionX": 80,
+					"positionY": 75,
+					"circularX": 1,
+					"circularY": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i1 for atn_sr",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"position": 20,
+					"circular": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i2 for atn_sr",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"position": 50,
+					"circular": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "i3 for atn_sr",
+				"class": "GaussStimulus1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 4,
+					"amplitude": 0,
+					"position": 80,
+					"circular": 1,
+					"normalized": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost ior_s",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost atn_sr",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost atn_sa",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost con_s",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost wm_s",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost vis_f",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost atn_f",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost con_f",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost wm_f",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost atn_c",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "boost wm_c",
+				"class": "BoostStimulus",
+				"param": {
+					"amplitude": 0
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "noise atn_sr",
+				"class": "NormalNoise",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "noise kernel atn_sr",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 0,
+					"amplitude": 0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "noise atn_sr",
+					"component": "output"
+				}
+			},
+			{
+				"label": "noise atn_sa",
+				"class": "NormalNoise",
+				"param": {
+					"size": [1,100],
+					"amplitude": 1
+				},
+				"nInputs": 0,
+				"input": null
+			},
+			{
+				"label": "noise kernel atn_sa",
+				"class": "GaussKernel1D",
+				"param": {
+					"size": [1,100],
+					"sigma": 0,
+					"amplitude": 0.5,
+					"circular": 1,
+					"normalized": 1,
+					"cutoffFactor": 3
+				},
+				"nInputs": 1,
+				"input": {
+					"label": "noise atn_sa",
+					"component": "output"
+				}
+			}
+		]
+	}
+}
