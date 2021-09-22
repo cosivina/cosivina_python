@@ -28,7 +28,7 @@ if options.useNumba:
 else:
     print('Using cosvina without numba.\n')
 
-print('Note: Changing between numba and no-numba mode requires restart of the kernel,\n')
+print('Note: Changing between numba and no-numba mode may require restarting the kernel.\n')
 
 
 ## create sim

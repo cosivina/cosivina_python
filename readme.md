@@ -9,9 +9,9 @@ Published under the Simplified BSD License (see LICENSE_BSD.txt)
 
 ## Overview
 
-Cosivina is a free object-oriented framework to construct dynamic field architectures and simulate the evolution of activation in these architectures. For more information on Dynamic Field Theory in general, please visit [www.dynamicfieldtheory.org](http://www.dynamicfieldtheory.org).
+Cosivina is a free object-oriented framework to construct dynamic field architectures and simulate the evolution of activation in these architectures. For more information on Dynamic Field Theory in general, please visit [www.dynamicfieldtheory.org](http://www.dynamicfieldtheory.org). For more thorough description of the cosivina framework, see the [Wiki](https://github.com/cosivina/cosivina/wiki) of the Matlab version.
 
-Cosivina was originally written for Matlab. This Python implementation offers the core functionality of the Matlab version, but currently lacks graphical user interfaces, only contains a subset of architecture elements and currently only supports one- or two-dimensional neural fields.
+Cosivina was originally written for Matlab. This Python implementation offers the core functionality of the Matlab version, but currently lacks graphical user interfaces, contains only a subset of architecture elements and does not support dynamic fields with more than two dimensions.
 
 
 ## Quick start
@@ -22,7 +22,7 @@ Cosivina was originally written for Matlab. This Python implementation offers th
 
 ## Simulation performance and just-in-time compilation
 
-Cosivina for Python can be operated in two modes: as regular Python code, or with just-in-time compilation using the [Numba](https://numba.pydata.org/) package. The no-numba version has performance that is typically somewhat slower (and sometimes a lot slower) than running the equivalent code in Matlab. The numba version compiles each class and function when it is used for the first time. This can take quite long, potentially up to several minutes for code that uses many different classes. However, once compiled, the execution of subsequent function calls is faster than in the no-numba version. Both version are based on the scientific computing package numpy, and all element components are numpy arrays.
+Cosivina for Python can be operated in two modes: as regular Python code, or with just-in-time compilation using the [Numba](https://numba.pydata.org/) package. The no-numba version has performance that is similar, but typically slightly slower (and sometimes a lot slower) than running the equivalent code in Matlab. The numba version compiles each class and function when it is used for the first time. This can take quite long, potentially up to several minutes for code that uses many different classes. However, once compiled, the execution of subsequent function calls is faster than in the no-numba version. Both version are based on the scientific computing package numpy, and all element components are numpy arrays.
 
 One key performance advantage of the numba version is that it significantly reduces the overhead of calling methods and accessing elements of custom classes. Both in Matlab and standard Python, calling a method of a custom class (such as any architecture element in cosivina) takes extra time compared to executing the content of the method outside of a class. In dynamic field architectures in which individual steps are not very computation-intensive (such as in most architectures composed only of one-dimensional fields), this overhead can make up a substantial part of the total computation time. The compiled code largely avoids this overhead, and should come close to optimized procedural Matlab code.
 
@@ -36,14 +36,14 @@ The example files (`exampleThreeLayerField`, `exampleCoupling`, and `exampleScen
 You can choose which version of cosivina is used by importing either `cosivina.numba` or `cosivina.nonumba` (you should never import just `cosivina`). In the example scripts, both versions are prepared, and you can choose by commenting out one of them (with the hash character), either
 
     from cosivina.nonumba import *
-    \# from cosivina.numba import *
+    # from cosivina.numba import *
 
 or
 
-	\# from cosivina.nonumba import *
+	# from cosivina.nonumba import *
     from cosivina.numba import *
 
-Switching between versions once you have imported one of them will require restarting the Python kernel (similar to a `clear all` in Matlab). In the Spyder IDE, you can do this by choosing in the menu bar `Consoles`, then `Restart kernel`. In Pyzo, it is `Shell`, `Restart`.
+Switching between versions once you have imported one of them may require restarting the Python kernel (similar to a `clear all` in Matlab). In the Spyder IDE, you can do this by choosing in the menu bar `Consoles`, then `Restart kernel`. In Pyzo, it is `Shell`, `Restart`.
 
 Note that the use of `from module import *` is somewhat frowned upon in Python, but allows the code to be most similar to Matlab. A cleaner way would be use e.g. `import cosivina.numba as cv`, and then calling all class constructors from the `cv` module, e.g. `sim = cv.Simulator()` and `sim.addElement(cv.NeuralField(...))`.
 
@@ -52,7 +52,7 @@ Note that the use of `from module import *` is somewhat frowned upon in Python, 
 
 The code to create and run an architecture is extremely similar between Matlab and Python, with only a few small differences described in the following sections. In addition, parameter files in json format are interchangeable between the two languages, meaning you can e.g. create an architecture in Matlab, and then load it in Python.
 
-It is also possible to save all element components (such as dynamic field activations) of a simulator in Python using the `Simulator.saveComponentsToMat` method, and load it in Matlab for analysis. Note that this will not create a `Simulator` object that can be run in Matlab; it rather creates a list of structs, one for each element, with the element's components saved as fields of those structs. Directly converting a `Simulator` object between Matlab and Python is currently not possible.
+It is also possible to save all element components (such as dynamic field activations) of a simulator in Python using the `Simulator.saveComponentsToMat` method, and load it in Matlab for analysis. Note that this will not create a `Simulator` object that can be run in Matlab; it rather creates a cell array of structs, one for each element, with the element's components saved as fields of those structs. Directly converting a `Simulator` object between Matlab and Python is currently not possible.
 
 
 ## Getting started for Matlab users
@@ -92,7 +92,7 @@ A simulation can be run just as in Matlab:
 
 	sim.run(tMax)
 
-You can plot components using the `matplotlib` module, which provides function that are very similar to Matlab, e.g.
+You can plot components using the `matplotlib` module, which provides functions that are very similar to Matlab, e.g.
 
     import matplotlib.pyplot as plt
     plt.plot(sim.getComponent('field s', 'activation')[0], 'b')
@@ -101,7 +101,7 @@ or for 2D fields
 
     plt.imshow(sim.getComponent('field v', 'activation'))
 
-Note that for plotting the 1D field, the component is indexed with `[0]`. This is because all components are 2D arrays, which are realized in Python as vectors of vectors. The plot functions expects a single vector, so we extract the first vector from the matrix (and unlike Matlab, Python uses 0-based indices, so the first row of the matrix has index 0).
+You may have to call `plt.show()` to actually display the result. Note that for plotting the 1D field, the component is indexed with `[0]`. This is because all components are 2D arrays, which are realized in Python as vectors of vectors. The plot functions expects a single vector, so we extract the first vector from the matrix (and unlike Matlab, Python uses 0-based indices, so the first row of the matrix has index 0).
 
 You can save all components in the simulator to a .mat file (which can then be loaded in Matlab) using
 
@@ -122,8 +122,8 @@ in the Python console (you need to have cosivina imported already for this to wo
 
 (with two underscores on each side of `init`). Similarly, get help on the Simulator class and its methods using e.g.
 
-help(Simulator)
-help(Simulator.saveComponentsToMat)
+    help(Simulator)
+    help(Simulator.saveComponentsToMat)
 
 The following elements are currently implemented:
 
@@ -131,7 +131,7 @@ The following elements are currently implemented:
 - `GaussStimulus1D` and `GaussStimulus2D`
 - `BoostStimulus`
 - `GaussKernel1D` and `GaussKernel2D`
-- `MexicanHatKernel1D and `MexicanHatKernel2D`
+- `MexicanHatKernel1D` and `MexicanHatKernel2D`
 - `LateralInteractions1D` and `LateralInteractions2D`
 - `KernelFFT` (with no more than two dimensions)
 - `SumInputs`
@@ -147,7 +147,7 @@ The following elements are currently implemented:
 
 Three example files are included to illustrate different aspects of the module:
 
-- `exampleThreeLayerField`: Create the three-layer field architecture from the Matlab examples, load settings from a json file, run it and measure computation time, and then run it with (manual) online plotting. Note that online plotting may be very slow in some environments; in this case, you should comment out the last section of the code). Also note that you could load the whole architecture from the json file, re-creating it in Python is just for illustration.
+- `exampleThreeLayerField`: Create the three-layer field architecture from the Matlab examples, load settings from a json file, run it and measure computation time, and then run it with (manual) online plotting. Note that online plotting may be very slow in some environments; in this case, you should comment out the last section of the code. Also note that you could load the whole architecture from the json file, re-creating it in Python is just for illustration.
 
 - `exampleCoupling`: Creates the coupling architecture from the Matlab examples, with two one-dimensional field interacting with a single two-dimensional field along different dimensions. Runs the model with timing, and then plots the final state.
 
