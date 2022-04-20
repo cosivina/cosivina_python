@@ -1,5 +1,5 @@
 # Cosivina for Python - Compose, Simulate, and Visualize Neurodynamic Architectures
-## An open source module for Python
+## An open source package for Python
 
 Written by Sebastian Schneegans
 
@@ -17,12 +17,13 @@ Cosivina was originally written for Matlab. This Python implementation offers th
 ## Quick start
 
 - Clone the repository or download the code as zipfile.
+- Make sure you have all required Python packages installed, in particular numpy, matplotlib, and numba (version 0.51 or later; see section [Getting started for Matlab users](#getting-started-for-matlab-users) for details)
 - Open your preferred Python IDE, open one of the example files from the base folder (e.g. `exampleCoupling`, and run it.
 
 
 ## Simulation performance and just-in-time compilation
 
-Cosivina for Python can be operated in two modes: as regular Python code, or with just-in-time compilation using the [Numba](https://numba.pydata.org/) package. The no-numba version has performance that is similar, but typically slightly slower (and sometimes a lot slower) than running the equivalent code in Matlab. The numba version compiles each class and function when it is used for the first time. This can take quite long, potentially up to several minutes for code that uses many different classes. However, once compiled, the execution of subsequent function calls is faster than in the no-numba version. Both version are based on the scientific computing package numpy, and all element components are numpy arrays.
+Cosivina for Python can be operated in two modes: as regular Python code, or with just-in-time compilation using the [Numba](https://numba.pydata.org/) package. The no-numba version has performance that is similar, but typically slightly slower (and sometimes a lot slower) than running the equivalent code in Matlab. The numba version compiles each class and function when it is used for the first time. This can take quite long, potentially up to several minutes for code that uses many different classes. However, once compiled, the execution of subsequent function calls is faster than in the no-numba version. (Note that when using Spyder as your Python IDE, functions may be re-compiled on each execution of a script; see section [Recommended Spyder settings](#recommended-spyder-settings).)  Both versions are based on the scientific computing package numpy, and all element components are numpy arrays.
 
 One key performance advantage of the numba version is that it significantly reduces the overhead of calling methods and accessing elements of custom classes. Both in Matlab and standard Python, calling a method of a custom class (such as any architecture element in cosivina) takes extra time compared to executing the content of the method outside of a class. In dynamic field architectures in which individual steps are not very computation-intensive (such as in most architectures composed only of one-dimensional fields), this overhead can make up a substantial part of the total computation time. The compiled code largely avoids this overhead, and should come close to optimized procedural Matlab code.
 
@@ -59,7 +60,18 @@ It is also possible to save all element components (such as dynamic field activa
 
 A popular way to work with Python is to install an environment like [Anaconda](https://www.anaconda.com/products/individual), which provides a Python interpreter and an integrated development environment (IDE), such as Spyder, that works similar to Matlab. A somewhat more light-weight alternative to Anaconda for Windows is [Winpython](https://winpython.github.io/) with the Pyzo IDE. 
 
-Once an environment is installed (and cosvina downloaded), you can load one of the cosivina example files and run it as you would in Matlab.
+The suggested environments should install all required packages for using cosivina, but the numba package may need to be updated to the latest version. If you are using Anaconda, run a command prompt from the Anaconda Navigator. Execute the command `conda list` to see all installed packages, and check the numba version. If it is lower than 0.54.1, run `conda update numba` (or `conda install numba` if it is missing entirely).
+
+Once everything is installed (and cosvina downloaded), you can load one of the cosivina example files and run it as you would in Matlab.
+
+
+## Recommended Spyder Settings
+
+If you are using the Spyder IDE, you may want to change some of the default setttings.
+
+To use online plotting (as in the example file `exampleThreeLayerField.py`), set the Graphics backend under Tools -> Preferences -> IPython console -> Graphics to something other than Inline (e.g. Qt5 or Tkinter; Automatic should also work).
+
+To efficiently use the numba version of cosivina, you should disable the User Module Reloader (UMR) under Tools -> Prefereces -> Python Interpreter. If UMR is enabled, imported modules will be reloaded every time a script is called. This will also cause all numba functions to be re-compiled, which can take a long time. 
 
 
 ## Basic commands and differences to Matlab
@@ -92,7 +104,7 @@ A simulation can be run just as in Matlab:
 
 	sim.run(tMax)
 
-You can plot components using the `matplotlib` module, which provides functions that are very similar to Matlab, e.g.
+You can plot components using the `matplotlib` package, which provides functions that are very similar to Matlab, e.g.
 
     import matplotlib.pyplot as plt
     plt.plot(sim.getComponent('field s', 'activation')[0], 'b')
@@ -130,6 +142,7 @@ The following elements are currently implemented:
 - `NeuralField` (with no more than two dimensions)
 - `GaussStimulus1D` and `GaussStimulus2D`
 - `BoostStimulus`
+- `CustomStimulus`
 - `GaussKernel1D` and `GaussKernel2D`
 - `MexicanHatKernel1D` and `MexicanHatKernel2D`
 - `LateralInteractions1D` and `LateralInteractions2D`
@@ -140,12 +153,13 @@ The following elements are currently implemented:
 - `ExpandDimension2D` (shouldn't really be needed, use `Transpose` instead)
 - `SumDimension` (note: `sumDimensions` argument must be a numpy array)
 - `SumAllDimensions`
+- `PointwiseProduct`
 - `NormalNoise` (with no more than two dimensions)
 
 
 ## Example files
 
-Three example files are included to illustrate different aspects of the module:
+Three example files are included to illustrate different aspects of the package:
 
 - `exampleThreeLayerField`: Create the three-layer field architecture from the Matlab examples, load settings from a json file, run it and measure computation time, and then run it with (manual) online plotting. Note that online plotting may be very slow in some environments; in this case, you should comment out the last section of the code. Also note that you could load the whole architecture from the json file, re-creating it in Python is just for illustration.
 

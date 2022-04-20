@@ -20,6 +20,8 @@ from cosivina.SumInputs import SumInputs
 from cosivina.ScaleInput import ScaleInput
 from cosivina.NormalNoise import NormalNoise
 from cosivina.KernelFFT import KernelFFT
+from cosivina.PointwiseProduct import PointwiseProduct
+from cosivina.CustomStimulus import CustomStimulus
 
 # from cosivina.AltGaussKernel2D import AltGaussKernel2D
 # from cosivina.AltGaussKernel1D import AltGaussKernel1D
