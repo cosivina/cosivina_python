@@ -3,7 +3,6 @@ from cosivina.elements import *
 import json
 from scipy.io import savemat
 
-# todo: copy()
 
 class Simulator:
     '''
@@ -20,6 +19,7 @@ class Simulator:
     Methods for creating architectures:
         addElement: Add a new element with connections.
         addConnection: Add connections between existing elements.
+        addField: Add a new NeuralField, its History, and interaction kernel elements.
 
     Methods for running simulations:
         init: Initialize the simulation.
@@ -294,6 +294,56 @@ class Simulator:
         if self.initialized:
             self.refreshConnections()
 
+    def addField(self, time_run, label, size=(1, 1), tau=10, h=-5, beta=2, amplitudeExc=0, amplitudeInh=0,
+                 amplitudeGlobal=0, sigmaExc=4, sigmaInh=8, circular=True, normalized=True, cutoffFactor=3,
+                 inputLabels=None, inputComponents=None, targetLabels=None, historyComponents="activation"):
+        """
+        wrapper to add the NeuralField, History, and the Kernel elements in one line.
+        Currently the storingTimes of History is fixed to be every time step.
+
+        Args:
+            time_run (int): Simulation run time in msec, needed to initialize the History element with the right size.
+            historyComponents (str): Specifies which components of the NeuralField should be recorded.
+        """
+        # NeuralField
+        self.addElement(NeuralField("Field" + label, size=size, tau=tau, h=h, beta=beta),
+                        inputLabels=inputLabels,
+                        inputComponents=inputComponents,
+                        targetLabels=targetLabels
+                        )
+
+        # History
+        # TODO: set the storingTimes dynamically
+        self.addElement(History("Hist" + label, size=size, storingTimes=[*range(int(time_run / self.deltaT))]),
+                        inputLabels="Field" + label,
+                        inputComponents=historyComponents
+                        )
+
+        # Interaction kernel
+        if size == [1, 1]:  # 0D node
+            self.addElement(ScaleInput("Kernel" + label, amplitude=amplitudeExc),
+                            inputLabels="Field" + label,
+                            targetLabels="Field" + label
+                            )
+
+        elif size[0] == 1:  # 1D
+            self.addElement(LateralInteractions1D("Kernel" + label, size=size, sigmaExc=sigmaExc,
+                                                  amplitudeExc=amplitudeExc, sigmaInh=sigmaInh,
+                                                  amplitudeInh=amplitudeInh, amplitudeGlobal=amplitudeGlobal,
+                                                  circular=circular, normalized=normalized, cutoffFactor=cutoffFactor),
+                            inputLabels="Field" + label,
+                            targetLabels="Field" + label
+                            )
+
+        else:  # 2D, use FFT convolution
+            # TODO: possibility to specify different sigma for different dimensions
+            self.addElement(KernelFFT("Kernel" + label, size=size, sigmaExc=[[sigmaExc], [sigmaExc]],
+                                      amplitudeExc=amplitudeExc, sigmaInh=[[sigmaInh], [sigmaInh]],
+                                      amplitudeInh=amplitudeInh, amplitudeGlobal=amplitudeGlobal,
+                                      circular=[[circular], [circular]], normalized=normalized),
+                            inputLabels="Field" + label,
+                            targetLabels="Field" + label
+                            )
 
     def isElement(self, elementLabel):
         ''' Check if element exists in architecture.

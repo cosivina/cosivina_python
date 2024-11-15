@@ -30,7 +30,7 @@ else:
 
     intType = np.int32
     floatType = np.float64
-    boolType = np.bool
+    boolType = np.bool_
     stringType = str
     arrayType1D = np.ndarray
     arrayType2D = np.ndarray

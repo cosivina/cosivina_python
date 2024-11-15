@@ -22,6 +22,9 @@ from cosivina.NormalNoise import NormalNoise
 from cosivina.KernelFFT import KernelFFT
 from cosivina.PointwiseProduct import PointwiseProduct
 from cosivina.CustomStimulus import CustomStimulus
+from cosivina.History import History
+from cosivina.CoordinateTransformation import CoordinateTransformation
+from cosivina.TimedGaussStimulus1D import TimedGaussStimulus1D
 
 # from cosivina.AltGaussKernel2D import AltGaussKernel2D
 # from cosivina.AltGaussKernel1D import AltGaussKernel1D

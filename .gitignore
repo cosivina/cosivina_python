@@ -29,3 +29,6 @@ cosivina/__pycache__/SumInputs.cpython-39.pyc
 cosivina/__pycache__/Transpose.cpython-39.pyc
 cosivina/nonumba/__pycache__/__init__.cpython-39.pyc
 cosivina/numba/__pycache__/__init__.cpython-39.pyc
+/**/.*
+/**/.*/
+!/.gitignore
